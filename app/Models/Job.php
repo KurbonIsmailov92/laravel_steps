@@ -17,9 +17,4 @@ class Job extends Model {
         return $this->belongsTo(Employer::class);
     }
 
-    public function show($id)
-    {
-        $job = Job::with('employer')->findOrFail($id); // Загрузка связанного работодателя
-        return view('job.show', ['job' => $job]);
-    }
 }
