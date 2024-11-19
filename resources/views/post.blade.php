@@ -6,5 +6,9 @@
     <p>
         {{$post['body']}}
     </p>
+
+    <p>
+        <strong>Author is:</strong> {{$post->user->first_name}} {{$post->user->last_name}}
+    </p>
 </x-layout>
 
