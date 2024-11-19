@@ -6,5 +6,8 @@
     <p>
         This job pays {{$job['salary']}} per year.
     </p>
+    <p>
+        <strong>Employer is:</strong> {{$job->employer->name}}.
+    </p>
 </x-layout>
 

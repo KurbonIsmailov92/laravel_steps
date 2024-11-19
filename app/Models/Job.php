@@ -11,4 +11,15 @@ class Job extends Model {
     use HasFactory;
     protected $table = 'job_listings';
     protected $fillable = ['title', 'body'];
+
+    public function employer()
+    {
+        return $this->belongsTo(Employer::class);
+    }
+
+    public function show($id)
+    {
+        $job = Job::with('employer')->findOrFail($id); // Загрузка связанного работодателя
+        return view('job.show', ['job' => $job]);
+    }
 }
