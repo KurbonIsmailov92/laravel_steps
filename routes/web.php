@@ -9,8 +9,9 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
+    $jobs = Job::with('employer')->get();
     return view('jobs', [
-        'jobs' => Job::all()
+        'jobs' => $jobs
     ]);
 });
 
@@ -24,8 +25,9 @@ Route::get('/contact', function () {
 });
 
 Route::get('/posts', function () {
+    $posts = Post::with('user')->get();
     return view('posts' , [
-        'posts' => Post::all()
+        'posts' => $posts
     ]);
 });
 

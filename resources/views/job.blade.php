@@ -7,9 +7,6 @@
         This job pays {{$job['salary']}} per year.
     </p>
     <p>
-        <strong>Employer is:</strong> {{$job->employer->name}}.
-    </p>
-    <p>
         Tags:
         @foreach ($job->tags as $tag)
             {{ $tag->name }},
