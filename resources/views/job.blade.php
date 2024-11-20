@@ -9,5 +9,11 @@
     <p>
         <strong>Employer is:</strong> {{$job->employer->name}}.
     </p>
+    <p>
+        Tags:
+        @foreach ($job->tags as $tag)
+            {{ $tag->name }},
+        @endforeach
+    </p>
 </x-layout>
 
