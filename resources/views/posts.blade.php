@@ -6,7 +6,7 @@
     @foreach($posts as $post)
         <ul>
             <li>
-                <a href="/posts/{{ $post['id'] }}" class="block px-4 py-6 border border-gray-200 rounded-lg hover:underline">
+                <a href="/posts/{{ $post['id'] }}" class="block px-4 py-6 border border-gray-200 rounded-lg hover:underline bg-white">
                     <div class="font-bold text-blue-500 text-sm">
                         {{$post->user->first_name}} {{$post->user->last_name}}
                     </div>
@@ -15,6 +15,9 @@
             </li>
         </ul>
     @endforeach
+        <div class="bg-white border border-gray-200 rounded-lg">
+            {{$posts->links()}}
+        </div>
     </div>
 </x-layout>
 

@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->get();
+    $jobs = Job::with('employer')->simplePaginate(3);
     return view('jobs', [
         'jobs' => $jobs
     ]);
@@ -25,7 +25,7 @@ Route::get('/contact', function () {
 });
 
 Route::get('/posts', function () {
-    $posts = Post::with('user')->get();
+    $posts = Post::with('user')->simplePaginate(5);
     return view('posts' , [
         'posts' => $posts
     ]);
