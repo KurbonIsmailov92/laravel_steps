@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        Job Listings
+        Job Listing
     </x-slot:heading>
     <div class="space-y-2">
         @foreach($jobs as $job)
