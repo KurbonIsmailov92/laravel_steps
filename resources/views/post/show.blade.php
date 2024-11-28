@@ -13,5 +13,14 @@
             {{ $comment->content }}
         @endforeach
     </p>
+    <div class="sm:flex sm:justify-between">
+        <p class="mt-1">
+            <x-button href="/posts" class="text-red-500">Go Back</x-button>
+        </p>
+        <p class="mt-1">
+            <x-button href="/posts/{{$post->id}}/edit">Edit Post</x-button>
+        </p>
+
+    </div>
 </x-layout>
 

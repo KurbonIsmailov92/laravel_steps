@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Kurbon`s Laravel testing</title>
-    <script src = "https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-full">
 <div class="min-h-full">
@@ -14,7 +14,8 @@
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <img class="h-8 w-8" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Official_logo_of_Alif_Bank_in_Tajikistan.png"
+                        <img class="h-8 w-8"
+                             src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Official_logo_of_Alif_Bank_in_Tajikistan.png"
                              alt="Alif">
                     </div>
                     <div class="hidden md:block">
@@ -22,9 +23,9 @@
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                             <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
-                            <x-nav-link href="/posts" :active="request()->is('posts')">Posts</x-nav-link>
+                            <x-nav-link href="/posts" :active="request()->is('post')">Posts</x-nav-link>
                             <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
-                              </div>
+                        </div>
                     </div>
                 </div>
                 <div class="hidden md:block">
@@ -76,7 +77,7 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                 <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
-                <x-nav-link href="/posts" :active="request()->is('posts')">Posts</x-nav-link>
+                <x-nav-link href="/posts" :active="request()->is('post')">Posts</x-nav-link>
                 <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
             </div>
             <div class="border-t border-gray-700 pb-3 pt-4">
@@ -109,7 +110,10 @@
     <header class="bg-white shadow">
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
             <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}}</h1>
-            <x-button href="/jobs/create">Create Job</x-button>
+            <div class="flex space-x-4">
+                <x-button href="/jobs/create">Create Job</x-button>
+                <x-button href="/posts/create">Create Post</x-button>
+            </div>
         </div>
     </header>
     <main class="h-full bg-grey-900">
