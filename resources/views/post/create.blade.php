@@ -63,6 +63,7 @@
                     Save Post
                 </button>
             </div>
+        </div>
     </form>
 
 </x-layout>
