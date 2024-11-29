@@ -14,8 +14,7 @@
                         <x-form-label for="email" class="mt-8">Email</x-form-label>
                         <div class="mt-2">
                             <div>
-                                <x-form-input type="email" name="email" id="email" autocomplete="email"
-                                              required/>
+                                <x-form-input type="email" name="email" id="email" autocomplete="email" :value="old('email')" required/>
                             </div>
                             <div>
                                 <x-form-error name="email"/>

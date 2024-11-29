@@ -62,14 +62,14 @@
                     </x-form-field>
 
                     <x-form-field>
-                        <x-form-label for="confirmation_password" class="mt-8">Confirm Password</x-form-label>
+                        <x-form-label for="password_confirmation" class="mt-8">Confirm Password</x-form-label>
                         <div class="mt-2">
                             <div>
-                                <x-form-input type="password" name="confirmation_password" id="confirmation_password" autocomplete="confirmation_password"
+                                <x-form-input type="password" name="password_confirmation" id="password_confirmation" autocomplete="password_confirmation"
                                               required/>
                             </div>
                             <div>
-                                <x-form-error name="confirmation_password"/>
+                                <x-form-error name="password_confirmation"/>
                             </div>
                         </div>
                     </x-form-field>

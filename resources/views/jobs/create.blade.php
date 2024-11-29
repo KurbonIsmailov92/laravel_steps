@@ -43,7 +43,7 @@
 
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <a href="/jobs" type="button" class="text-sm/6 font-semibold text-gray-900">Cancel</a>
+            <a href="/jobs" type="button" class="text-sm/6 font-semibold  text-red-500">Cancel</a>
             <x-form-button>Save</x-form-button>
         </div>
     </form>
