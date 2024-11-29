@@ -17,19 +17,6 @@ return new class extends Migration {
             $table->text('content');
 
         });
-
-        Schema::create('post_comment', function (Blueprint $table) {
-            $table->id();
-            $table->foreignIdFor(Comment::class, 'comment_id')
-                ->nullable()
-                ->constrained()
-                ->cascadeOnDelete();
-            $table->foreignIdFor(Post::class, 'post_id')
-                ->nullable()
-                ->constrained()
-                ->cascadeOnDelete();
-            $table->timestamps();
-        });
     }
 
     /**
@@ -38,5 +25,6 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::dropIfExists('comments');
+
     }
 };

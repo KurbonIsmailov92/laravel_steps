@@ -12,12 +12,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('body');
             $table->timestamps();
-            $table->foreignIdFor(User::class);
+            $table->foreignIdFor(User::class)->nullable();
         });
     }
 
