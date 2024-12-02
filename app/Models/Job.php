@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -23,4 +24,5 @@ class Job extends Model
     {
         return $this->belongsToMany(Tag::class, foreignPivotKey: "job_listing_id");
     }
+
 }
