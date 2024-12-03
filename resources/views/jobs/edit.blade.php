@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="flex items-center gap-x-6">
-                    <a href="/jobs/{{$job->id}}" type="button" class="text-sm/6 font-semibold text-gray-900">Cancel</a>
+                    <a href="/jobs/{{$job->id}}" type="button" class="text-sm/6 font-semibold text-gray-900 hover:text-white-500  ">Cancel</a>
                     <div>
                         <button type="submit"
                                 class='rel="next" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150'>Update

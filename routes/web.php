@@ -32,7 +32,7 @@ Route::get('jobs/{job}/edit', [JobController::class, 'edit'])
     ->can('edit','job');
 
 Route::patch('jobs/{job}', [JobController::class, 'update']);
-Route::delete('jobs/{job}', [JobController::class, 'delete']);
+Route::delete('jobs/{job}', [JobController::class, 'destroy']);
 
 Route::get('/register', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);

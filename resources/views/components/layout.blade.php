@@ -6,9 +6,9 @@
 
     <title>Kurbon`s Laravel testing</title>
     <link rel="icon" href="https://www.svgrepo.com/show/303213/facebook-wow-logo.svg" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/js/app.js'])
 </head>
-<body class="h-full">
+<body class="h-full bg-laracasts">
 <div class="min-h-full">
     <nav class="bg-gray-800">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
